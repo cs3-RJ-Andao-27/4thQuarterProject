@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style3.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <a href="index.html"><h2 class="logo">Aniverse</h2></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="why.html" id="whhy" onclick="return restrictedData()">WHY</a></li>
+                        <li><a href="what.html" onclick="return restrictedData()">WHAT</a></li>
+                        <li><a href="how.html" onclick="return restrictedData()">HOW</a></li>
+                        <li><a href="help.html" onclick="return restrictedData()">MAKE YOUR MOVE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont">
+                <h1>Why must we <span>SAVE</span> endangered animals?</h1>
+                <br>
+                <p>
+                    This importance comes down to many factors one of which is<br>
+                </p>
+                    <h2>BIODIVERSITY:</h2> 
+                    <p>Endangered animals contribute to the diversity of life on Earth,<br>
+                     which is essential for resilient ecosystems. Biodiversity, the variety of life in all its forms and levels,<br>
+                      from genes to ecosystems, is crucial for the stability and resilience of natural systems. <br>
+                      High biodiversity ensures that ecosystems can recover from disturbances, such as natural disasters <br>
+                      or human activities, and continue to provide essential services. Each species plays a unique role in its ecosystem,<br>
+                       and the loss of one species can have cascading effects on others, potentially leading to the collapse of entire ecosystems.
+                    </p>
+                <br>
+                <br>
+                <br>
+                    <h2>GENETIC DIVERSITY:</h2>
+                    <p>
+                        Preserving various species maintains genetic diversity, which can be crucial for future research and biotechnology.<br>
+                         Genetic diversity within and between species provides the raw material for evolution and adaptation to changing environments.<br>
+                          It is also a reservoir of genetic resources that can be used for developing new medicines, improving agricultural crops, and<br>
+                           solving other scientific and technological challenges.
+                    </p>
+                <br>
+                <br>
+                <br>
+                    <h2>CULTURAL AND ETHICAL VALUES:</h2>
+                    <p>
+                        Many cultures value wildlife for their heritage and aesthetic reasons, and there's a moral obligation to protect other species from extinction.<br>
+                         Wildlife is an integral part of many cultural identities and traditions, contributing to art, folklore, and religious practices.<br>
+                          The presence of diverse animal species enriches human experiences, providing opportunities for recreation, education, and inspiration.<br>
+                           Ethically, many people believe that all species have an intrinsic right to exist and that humans have a responsibility to protect them from harm,<br>
+                            especially when human activities are the primary cause of their endangerment.
+                    </p>
+                <br>
+                <br>
+                    <h3>references:</h3>
+                    <p>
+                        <span id="spand">-</span>Cardinale, B. J., Duffy, J. E., Gonzalez, A., Hooper, D. U., Perrings, C., Venail, P., ... & Naeem, S. (2012). Biodiversity loss and its impact on humanity. Nature, 486(7401), 59-67.<br>
+                        <span id="spand">-</span>Frankham, R., Ballou, J. D., & Briscoe, D. A. (2010). Introduction to Conservation Genetics. Cambridge University Press.<br>
+                        <span id="spand">-</span>Kellert, S. R. (1996). The value of life: Biological diversity and human society. Island Press.
+                    </p>
+            </div>
+        </div>
+    </body>
+    <script>
+        function restrictedData() {
+            var email1 = localStorage.getItem('userEmail');
+            var email2 = localStorage.getItem('userEmail2');
+            var pwd1 = localStorage.getItem('userPwd');
+            var pwd2 = localStorage.getItem('userPwd2');
+
+            if(email1 !== email2 || pwd1 !== pwd2 || email1 == pwd1 || email2 == pwd2){ 
+                alert("Please Log in or Register");
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
+</html>

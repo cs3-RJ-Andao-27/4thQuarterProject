@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style5.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <a href="index.html"><h2 class="logo">Aniverse</h2></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="why.html" onclick="return restrictedData()">WHY</a></li>
+                        <li><a href="what.html" onclick="return restrictedData()">WHAT</a></li>
+                        <li><a href="how.html" id="hhow" onclick="return restrictedData()">HOW</a></li>
+                        <li><a href="help.html" onclick="return restrictedData()">MAKE YOUR MOVE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont">
+                <h1>How do we <span>PRESERVE</span> these endangered animals?</h1>
+                <br>
+                <p>
+                    Preserving these endangered species are quite within our reach, they range from:<br>
+                </p>
+                    <h2>PROTECTED AREAS:</h2> 
+                    <p>
+                        Establishing and managing national parks, wildlife reserves, and marine protected areas to provide safe habitats.<br>
+                         Protected areas are essential for conserving biodiversity and providing a refuge for endangered species.<br>
+                          National parks, wildlife reserves, and marine protected areas (MPAs) are designated to preserve critical habitats,<br>
+                           safeguard ecological processes, and offer a sanctuary for wildlife from human activities. These areas help maintain <br>
+                           ecological integrity, support species' breeding and feeding grounds, and facilitate natural behaviors.
+                <br>
+                <br>
+                <br>
+                    <h2>HABITAT RESTORATION:</h2>
+                    <p>
+                        Rehabilitating damaged ecosystems through reforestation, wetland restoration, and removing invasive species.<br>
+                         Habitat restoration is a key strategy for reversing the damage caused by human activities and restoring the ecological balance.<br>
+                          Reforestation involves planting native trees and vegetation to restore deforested areas, which can enhance biodiversity,<br>
+                           sequester carbon, and improve soil and water quality. Wetland restoration focuses on reestablishing the hydrology, vegetation,<br>
+                            and soil conditions necessary for wetlands to function properly, providing habitat for a wide range of species and offering<br>
+                             ecosystem services like flood control and water purification. 
+                    </p>
+                <br>
+                <br>
+                <br>
+                    <h2>EDUCATION AND AWARENESS:</h2>
+                    <p>
+                        Educating the public about the importance of conservation and how they can contribute. Conservation education aims to<br>
+                         increase public awareness and understanding of biodiversity, the threats it faces, and the importance of conservation efforts.<br>
+                          Educational programs can target different audiences, from schoolchildren to policymakers, and use various formats,<br>
+                           such as classroom lessons, public campaigns, workshops, and media outreach. Raising awareness helps foster a sense of stewardship and encourages<br>
+                            individuals and communities to take action to protect wildlife and habitats.
+                    </p>
+                <br>
+                <br>
+                    <h3>references:</h3>
+                    <p>
+                        <span id="spand">-</span>Dudley, N. (Ed.). (2008). Guidelines for Applying Protected Area Management Categories. IUCN.<br>
+                        <span id="spand">-</span>Clewell, A. F., & Aronson, J. (2013). Ecological Restoration: Principles, Values, and Structure of an Emerging Profession. Island Press.<br>
+                        <span id="spand">-</span>Salafsky, N., & Wollenberg, E. (2000). Linking livelihoods and conservation: A conceptual framework and scale for assessing the integration of human needs and biodiversity. World Development, 28(8), 1421-1438.<br>
+                    </p>
+            </div>
+        </div>
+    </body>
+    <script>
+        function restrictedData() {
+            var email1 = localStorage.getItem('userEmail');
+            var email2 = localStorage.getItem('userEmail2');
+            var pwd1 = localStorage.getItem('userPwd');
+            var pwd2 = localStorage.getItem('userPwd2');
+
+            if(email1 !== email2 || pwd1 !== pwd2 || email1 == pwd1 || email2 == pwd2){ 
+                alert("Please Log in or Register");
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
+</html>

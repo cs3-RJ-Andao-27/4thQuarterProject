@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style6.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <a href="index.html"><h2 class="logo">Aniverse</h2></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="why.html" onclick="return restrictedData()">WHY</a></li>
+                        <li><a href="what.html" onclick="return restrictedData()">WHAT</a></li>
+                        <li><a href="how.html" onclick="return restrictedData()">HOW</a></li>
+                        <li><a href="help.html" id="hhelp" onclick="return restrictedData()">MAKE YOUR MOVE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont">
+                <h1>How can <span>YOU</span> a citizen help?</h1>
+                <br>
+                <p>
+                    Doing these task all alone is not an easy job, thus we need your help:<br>
+                </p>
+                    <h2>SUPPORT CONSERVATION ORGANIZATION</h2> 
+                    <p>
+                        Donate to or volunteer with organizations dedicated to wildlife conservation. Conservation organizations play a crucial role<br>
+                         in protecting endangered species and their habitats through a range of activities, including habitat preservation,<br>
+                          anti-poaching efforts, research, education, and policy advocacy. Financial donations help these organizations fund their projects,<br>
+                           hire staff, and purchase necessary equipment.
+                    </p>
+                <br>
+                <br>
+                <br>
+                    <h2>MAKE SUSTAINABLE CHOICES</h2>
+                    <p>
+                        Reduce your ecological footprint by consuming less, recycling, and supporting sustainable products. Individual choices can collectively<br>
+                         have a significant impact on the environment. By reducing consumption and waste, recycling materials, and choosing products<br>
+                          that are sustainably sourced, you can help lessen the demand for resources that lead to habitat destruction and pollution.<br>
+                           For example, choosing certified sustainable seafood helps protect marine ecosystems, while buying products made from recycled<br>
+                            materials reduces the need for raw materials.
+                    </p>
+                <br>
+                <br>
+                <br>
+                    <h2>EDUCATE OTHERS</h2>
+                    <p>
+                        Spread awareness about the importance of conserving wildlife and what individuals can do to help. Education is a powerful tool<br>
+                         for fostering a culture of conservation. By sharing information about the threats to wildlife and the steps people can take to mitigate<br>
+                          these threats, you can inspire others to take action. This can be done through various channels, including social media, community events,<br>
+                           educational programs, and personal conversations.
+                    </p>
+                <br>
+                <br>
+                    <h3>TOGETHER</h3>
+                    <p>
+                        Together with your help, we are able to protect these endangered animals from any more risks. When we think about it, most the causes of their<br>
+                         extinctions was because of us. And the sad part of all this, is that we have everything in our capabilities to stop harming them and their habitats.<br>
+                         Thus it is only morally right of us to take part all together and work in the preservation of these endangered animals and their habitats.
+                    </p>
+            </div>
+        </div>
+    </body>
+    <script>
+        function restrictedData() {
+            var email1 = localStorage.getItem('userEmail');
+            var email2 = localStorage.getItem('userEmail2');
+            var pwd1 = localStorage.getItem('userPwd');
+            var pwd2 = localStorage.getItem('userPwd2');
+
+            if(email1 !== email2 || pwd1 !== pwd2 || email1 == pwd1 || email2 == pwd2){ 
+                alert("Please Log in or Register");
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
+</html>

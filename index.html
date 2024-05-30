@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Animal Conservation</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <a href="index.html"><h2 class="logo">Aniverse</h2></a>
+                </div>
+                <div class="menu">
+                   <ul>
+                        <li><a href="why.html" onclick="return restrictedData()">WHY</a></li>
+                        <li><a href="what.html" onclick="return restrictedData()">WHAT</a></li>
+                        <li><a href="how.html" onclick="return restrictedData()">HOW</a></li>
+                        <li><a href="help.html" onclick="return restrictedData()">MAKE YOUR MOVE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <h1>Save the<br><span>Endangered</span><br>Animals</h1>
+                <p class="para">
+                    Every year, month, day an animal in this world gets closer<br>
+                    and closer to the brink of extinction. So come join us in <br>
+                    learning how to preserve these endangered species and their <br>
+                    habitats.
+                </p>
+                <button class="cn" onclick="return restrictedData()"><a href="why.html">JOIN US</a></button>
+                <div class="form">
+                    <h2>Login Here</h2>
+                    <form>
+                    <input type="email" id="email" placeholder="Input Email Address Here">
+                    <input type="password" id="pwd" placeholder="Input Password Here">
+                    <button type="submit" class="btn" value="Submit" onclick="checkData()">Login</button>
+                    </form>
+                    <p class="link">Don't have an account?<br>
+                    <a href="signup.html">Sign up </a> here</a></p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function restrictedData() {
+            var email1 = localStorage.getItem('userEmail');
+            var email2 = localStorage.getItem('userEmail2');
+            var pwd1 = localStorage.getItem('userPwd');
+            var pwd2 = localStorage.getItem('userPwd2');
+
+            if(email1 !== email2 || pwd1 !== pwd2 || email1 == pwd1 || email2 == pwd2){ 
+                alert("Please Log in or Register");
+                return false;
+            }else{
+                return true;
+            }
+        }
+        
+        function checkData() {
+    var enterEmail = document.getElementById('email').value;
+    var enterPwd = document.getElementById('pwd').value;
+
+    localStorage.setItem('userEmail2', enterEmail);
+    localStorage.setItem('userPwd2', enterPwd);
+    
+    var getEmail = localStorage.getItem('userEmail');
+    var getPwd = localStorage.getItem('userPwd');
+
+    if(enterEmail == getEmail) {
+        if(enterPwd == getPwd) {
+            alert("Successfully Logged In");
+        }
+        else {
+            alert ("Wrong password");
+        }
+    }else {
+        alert("Invalid Details");
+    }
+}
+    </script>
+</html>

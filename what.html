@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style4.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <a href="index.html"><h2 class="logo">Aniverse</h2></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="why.html" onclick="return restrictedData()">WHY</a></li>
+                        <li><a href="what.html" id="whhat" onclick="return restrictedData()">WHAT</a></li>
+                        <li><a href="how.html" onclick="return restrictedData()">HOW</a></li>
+                        <li><a href="help.html" onclick="return restrictedData()">MAKE YOUR MOVE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont">
+                <h1>What poses a <span>THREAT</span> to these endangered animals?</h1>
+                <br>
+                <p>
+                    There are many threats that fuel the extinction of animals, some of these are:<br>
+                </p>
+                    <h2>HABITAT DESTRUCTION:</h2> 
+                    <p>
+                        Deforestation, urbanization, and agriculture lead to the loss of natural habitats. Habitat destruction is one of the most<br>
+                         significant threats to wildlife, as it directly eliminates the places where animals live, breed, and find food. <br>
+                         Deforestation, driven by logging, agriculture, and development, removes vast tracts of forests, which are home to countless species.<br>
+                          Urbanization encroaches on natural areas, replacing them with cities, roads, and infrastructure.<br>
+                           Agricultural expansion often involves clearing land for crops and livestock, leading to habitat fragmentation,<br>
+                            which isolates animal populations and makes it difficult for them to find mates and resources.
+                    </p>
+                <br>
+                <br>
+                <br>
+                    <h2>CLIMATE CHANGE & POLLUTION:</h2>
+                    <p>
+                        Changes in climate can alter habitats and make them unsuitable for certain species. Climate change, driven by the<br>
+                         accumulation of greenhouse gases in the atmosphere, leads to global temperature increases, changing precipitation patterns,<br>
+                         and more frequent extreme weather events. These changes can alter habitats in several ways: rising temperatures may<br>
+                          push species out of their thermal tolerance zones, melting ice caps reduce the habitat available for polar species,<br>
+                          and shifting weather patterns can affect the availability of food and water.<br>
+                          Contaminants in air, water, and soil can harm wildlife. Pollution takes many forms, including chemical pollutants,<br>
+                           plastics, and noise pollution. Chemical pollutants, such as pesticides, heavy metals, and industrial chemicals,<br>
+                          can poison wildlife, disrupt endocrine systems, and cause reproductive failures. <br>
+                           Water pollution from agricultural runoff, sewage, and industrial discharges can create dead zones in aquatic environments,<br>
+                           where oxygen levels are too low to support most life forms.
+                    </p>
+                <br>
+                <br>
+                <br>
+                    <h2>POACHING AND ILLEGAL TRADES:</h2>
+                    <p>
+                        Many species are threatened by illegal hunting and trade. Poaching, the illegal killing of wildlife, is a major threat to many endangered species.<br>
+                         Animals are often hunted for their valuable parts, such as elephant tusks, rhino horns, tiger bones, and pangolin scales,<br>
+                          which are used in traditional medicine, ornaments, and as status symbols. The illegal wildlife trade is a multi-billion-dollar industry<br>
+                           that operates globally, driving many species to the brink of extinction. Poaching disrupts population dynamics, reduces genetic diversity,<br>
+                            and can lead to the collapse of populations.
+                    </p>
+                <br>
+                <br>
+                    <h3>references:</h3>
+                    <p>
+                        <span id="spand">-</span>Foley, J. A., DeFries, R., Asner, G. P., Barford, C., Bonan, G., Carpenter, S. R., ... & Snyder, P. K. (2005). Global consequences of land use. Science, 309(5734), 570-574.<br>
+                        <span id="spand">-</span>Parmesan, C. (2006). Ecological and evolutionary responses to recent climate change. Annual Review of Ecology, Evolution, and Systematics, 37, 637-669.<br>
+                        <span id="spand">-</span>Jambeck, J. R., Geyer, R., Wilcox, C., Siegler, T. R., Perryman, M., Andrady, A., ... & Law, K. L. (2015). Plastic waste inputs from land into the ocean. Science, 347(6223), 768-771.<br>
+                        <span id="spand">-</span>Wyler, L. S., & Sheikh, P. A. (2008). International illegal trade in wildlife: Threats and US policy. Congressional Research Service.
+                    </p>
+            </div>
+        </div>
+    </body>
+    <script>
+        function restrictedData() {
+            var email1 = localStorage.getItem('userEmail');
+            var email2 = localStorage.getItem('userEmail2');
+            var pwd1 = localStorage.getItem('userPwd');
+            var pwd2 = localStorage.getItem('userPwd2');
+
+            if(email1 !== email2 || pwd1 !== pwd2 || email1 == pwd1 || email2 == pwd2){ 
+                alert("Please Log in or Register");
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
+</html>
